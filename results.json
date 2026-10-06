@@ -1,0 +1,87 @@
+{
+  "A1": {
+    "advantage": 1.0,
+    "ms_per_game": 18.65989517827984,
+    "games": 60,
+    "advantage_fixed": 0.0
+  },
+  "A2": {
+    "advantage": 0.06099999999999994,
+    "fired": 305,
+    "total": 5000,
+    "rate": 0.061,
+    "theory": 0.059304943063041064,
+    "seconds": 9.91554154100595,
+    "ms_per_ballot": 1.98310830820119
+  },
+  "A3": {
+    "standard": {
+      "bits": 25,
+      "modulus": 17410770,
+      "seconds": 0.3372784170205705,
+      "match": true,
+      "prime_powers": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          647,
+          1
+        ]
+      ]
+    },
+    "smooth": {
+      "bits": 60,
+      "q_bits": 49,
+      "full_key": true,
+      "seconds": 0.000534582999534905,
+      "p_bits": 108
+    }
+  },
+  "B1": {
+    "pw_dict_tries": 4,
+    "pw_ms": 0.005375011824071407,
+    "est_50bit_hours": 3.127499741229511,
+    "oracle_modulus": 6,
+    "oracle_queries": 4,
+    "oracle_match": true,
+    "oracle_ms": 286.7148749646731,
+    "degenerate_master_recovered": true,
+    "n": 4,
+    "t": 3
+  },
+  "B2": {
+    "gate_accepts_torsion": true,
+    "in_subgroup": false,
+    "order": 3,
+    "leaked_residue": 1,
+    "true_residue": 1,
+    "combiner_aborts": true
+  },
+  "V11": {
+    "overrep_fraction": 0.47371178471153996,
+    "measured_doubled_share": 0.64235,
+    "theory_doubled_share": 0.6428825359556488
+  },
+  "V3": {
+    "digest_bits": 160,
+    "q_bits": 256
+  }
+}
