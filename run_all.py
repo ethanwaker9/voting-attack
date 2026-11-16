@@ -12,8 +12,8 @@ STEPS = [
     ("Helios amplifier : SHA-1 challenges (H-V3)", ["helios", "amplifier_V3_sha1.py"]),
     ("Belenios reference election (end-to-end)", ["belenios", "dkg.py"]),
     ("Belenios B1 : setup-channel compromise (B-V3,B-V5)", ["belenios", "attack_B1_setup_channel.py"]),
-    ("Belenios B2 : mixnet torsion injection (B-V9,B-V4)", ["belenios", "attack_B2_mixnet_subgroup.py"]),
-    ("Belenios amplifiers : B-V1, B-V2, B-V11", ["belenios", "amplifiers.py"]),
+    ("Belenios B2 : mixnet torsion injection (B-V6,B-V4)", ["belenios", "attack_B2_mixnet_subgroup.py"]),
+    ("Belenios amplifiers : B-V1, B-V2, B-V7", ["belenios", "amplifiers.py"]),
 ]
 
 

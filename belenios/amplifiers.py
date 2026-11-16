@@ -67,9 +67,9 @@ def amp_V2_rushing_dkg(G):
     print("     premise of the machine-checked privacy proof does not hold.")
 
 
-def amp_V11_scalar_bias(G):
+def amp_V7_scalar_bias(G):
     print("-" * 74)
-    print("Amplifier B-V11 : non-uniform scalars from single-width hash reduction")
+    print("Amplifier B-V7 : non-uniform scalars from single-width hash reduction")
     print("-" * 74)
     q = G.q
     tw_256 = 1 << 256
@@ -94,14 +94,14 @@ def amp_V11_scalar_bias(G):
 
 def run():
     print("=" * 74)
-    print("Belenios amplifiers : further weaknesses (B-V1, B-V2, B-V11)")
+    print("Belenios amplifiers : further weaknesses (B-V1, B-V2, B-V7)")
     print("=" * 74)
     G = B.belenios_group()
     amp_V1_exclusive_ownership(G)
     print()
     amp_V2_rushing_dkg(G)
     print()
-    amp_V11_scalar_bias(G)
+    amp_V7_scalar_bias(G)
 
 
 if __name__ == "__main__":

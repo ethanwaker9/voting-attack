@@ -24,7 +24,7 @@ def compute_synthetic_factors(G, ciphertexts, x):
 
 def run():
     print("=" * 74)
-    print("Belenios B2 : mixnet torsion injection  (flaw B-V9, and B-V4 as amplifier)")
+    print("Belenios B2 : mixnet torsion injection  (flaw B-V6, and B-V4 as amplifier)")
     print("=" * 74)
     G = B.belenios_group()
     rng = random.Random(5)
@@ -41,7 +41,7 @@ def run():
     print("        verifier gate (mimicking mixnet.ml) accepts honest mix:",
           mixnet.check_shuffle_proof_structure(G, cts, ee_prime, proof))
 
-    print("\n[V9] The verifier applies G.check to cc, cc_hat, tt_hat, t but NEVER to ee/ee'.")
+    print("\n[V6] The verifier applies G.check to cc, cc_hat, tt_hat, t but NEVER to ee/ee'.")
     d = 3
     h = element_of_order(G.p, G.q, (G.p - 1) // G.q, d, 1)
     print("     inject a torsion element h of order %d into output ciphertext #0." % d)
@@ -68,7 +68,7 @@ def run():
         print("     compute_synthetic_factors raised CombinationError(%s) -> tally aborts for" % e)
         print("     all voters, although t+1 valid partial decryptions are present.")
 
-    print("\nRESULT: B-V9 lets an out-of-subgroup ciphertext pass the shuffle verifier; its")
+    print("\nRESULT: B-V6 lets an out-of-subgroup ciphertext pass the shuffle verifier; its")
     print("        partial decryption leaks the tally key modulo small orders, and paired")
     print("        with B-V4 the same element denies the entire tally.")
 

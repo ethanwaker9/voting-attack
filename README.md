@@ -29,8 +29,8 @@ belenios/
   dkg.py                         Pedersen DKG, share channel, Lagrange, reference election
   mixnet.py                      re-encryption shuffle + membership gate
   attack_B1_setup_channel.py     B1: setup channel key recovery         (B-V3, B-V5)
-  attack_B2_mixnet_subgroup.py   B2: mixnet torsion injection           (B-V9, B-V4)
-  amplifiers.py                  exclusive ownership / rushing DKG / bias (B-V1, B-V2, B-V11)
+  attack_B2_mixnet_subgroup.py   B2: mixnet torsion injection           (B-V6, B-V4)
+  amplifiers.py                  exclusive ownership / rushing DKG / bias (B-V1, B-V2, B-V7)
 experiments.py                   collects all numbers into results/results.json
 run_all.py                       runs every reference election and attack
 results/                         results.json, plotdata.json
@@ -68,10 +68,10 @@ python3 make_figures.py       # writes ../final_paper/figures/*.pdf
 | A2 | H-V2 | read the vote off the board passively | advantage ~0.06 |
 | A3 | H-V4 | confine to a small subgroup, recover the key | 25 bits (std prime), full key (smooth) |
 | B1 | B-V3, B-V5 | crack admin, then recover the master key | master key, opens every ballot |
-| B2 | B-V9, B-V4 | torsion past the shuffle verifier | key leak mod d, tally denial |
+| B2 | B-V6, B-V4 | torsion past the shuffle verifier | key leak mod d, tally denial |
 
 Amplifiers (`amplifier_V3_sha1.py`, `amplifiers.py`) quantify H-V3 (SHA-1),
-B-V1 (exclusive ownership), B-V2 (rushing DKG key control), and B-V11 (scalar
+B-V1 (exclusive ownership), B-V2 (rushing DKG key control), and B-V7 (scalar
 bias).
 
 All randomness is seeded, so the runs are deterministic and reproducible.

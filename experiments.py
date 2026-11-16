@@ -155,7 +155,7 @@ def exp_amplifiers():
     rng = random.Random(1)
     N = 200000
     lo = sum(1 for _ in range(N) if rng.getrandbits(256) % q < overflow)
-    RESULTS["V11"] = {"overrep_fraction": overflow / q,
+    RESULTS["V7"] = {"overrep_fraction": overflow / q,
                       "measured_doubled_share": lo / N,
                       "theory_doubled_share": (2 * overflow) / tw}
 
@@ -177,7 +177,7 @@ def exp_amplifiers():
         coll.append((bits, tries, (time.perf_counter() - t0)))
     RESULTS["V3"] = {"digest_bits": 160, "q_bits": G.q.bit_length()}
     PLOTS["V3_collision"] = {"data": coll}
-    print("V11 doubled-share measured=%.4f  V3 collisions collected" % (lo / N))
+    print("V7 doubled-share measured=%.4f  V3 collisions collected" % (lo / N))
 
 
 def exp_board_cost():
